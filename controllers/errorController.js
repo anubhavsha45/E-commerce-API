@@ -33,7 +33,6 @@ module.exports = (err, req, res, next) => {
   error.statusCode = error.statusCode || 500;
   error.status = error.status || "error";
 
-  // 🔥 Handle common Mongo errors
 
   // Cast Error (invalid ID)
   if (err.name === "CastError") {

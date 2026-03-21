@@ -1,0 +1,66 @@
+[
+  {
+    "name": "iPhone 15 Pro",
+    "price": 129999,
+    "description": "Latest Apple smartphone with A17 Pro chip and titanium design",
+    "category": "Electronics",
+    "stock": 25,
+    "images": ["https://example.com/iphone15.jpg"]
+  },
+  {
+    "name": "Samsung Galaxy S23",
+    "price": 79999,
+    "description": "Flagship Samsung phone with Snapdragon processor",
+    "category": "Electronics",
+    "stock": 30,
+    "images": ["https://example.com/s23.jpg"]
+  },
+  {
+    "name": "Nike Air Max",
+    "price": 9999,
+    "description": "Comfortable and stylish running shoes",
+    "category": "Fashion",
+    "stock": 50,
+    "images": ["https://example.com/nike.jpg"]
+  },
+  {
+    "name": "Wooden Study Table",
+    "price": 6999,
+    "description": "Durable wooden study table for home and office",
+    "category": "Furniture",
+    "stock": 15,
+    "images": ["https://example.com/table.jpg"]
+  },
+  {
+    "name": "Sony WH-1000XM5 Headphones",
+    "price": 29999,
+    "description": "Industry leading noise cancelling headphones",
+    "category": "Electronics",
+    "stock": 20,
+    "images": ["https://example.com/sony.jpg"]
+  },
+  {
+    "name": "Dell Inspiron 15 Laptop",
+    "price": 54999,
+    "description": "Reliable laptop for students and professionals",
+    "category": "Electronics",
+    "stock": 10,
+    "images": ["https://example.com/dell.jpg"]
+  },
+  {
+    "name": "Casual Cotton T-Shirt",
+    "price": 799,
+    "description": "Soft and breathable cotton t-shirt",
+    "category": "Fashion",
+    "stock": 100,
+    "images": ["https://example.com/tshirt.jpg"]
+  },
+  {
+    "name": "Office Chair Ergonomic",
+    "price": 8999,
+    "description": "Ergonomic chair with lumbar support",
+    "category": "Furniture",
+    "stock": 18,
+    "images": ["https://example.com/chair.jpg"]
+  }
+]
