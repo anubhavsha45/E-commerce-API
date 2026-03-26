@@ -78,3 +78,16 @@ exports.createOrder = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+exports.deleteOrder = catchAsync(async (req, res, next) => {
+  const order = await Order.findByIdAndDelete(req.params.orderId);
+
+  if (!order) {
+    return next(new AppError("There is no error with that id", 400));
+  }
+
+  return res.status(204).json({
+    status: "success",
+    data: null,
+  });
+});
