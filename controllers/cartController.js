@@ -3,7 +3,6 @@ const Product = require("./../models/Product");
 const AppError = require("./../utils/errorClass");
 const catchAsync = require("./../utils/catchAsync");
 
-// 🟢 1. Get Cart
 exports.getCart = catchAsync(async (req, res, next) => {
   const cart = await Cart.findOne({ user: req.user._id }).populate(
     "items.product",
@@ -17,7 +16,6 @@ exports.getCart = catchAsync(async (req, res, next) => {
   });
 });
 
-// 🟢 2. Add to Cart
 exports.addToCart = catchAsync(async (req, res, next) => {
   const { productId, quantity } = req.body;
 
@@ -58,7 +56,6 @@ exports.addToCart = catchAsync(async (req, res, next) => {
   });
 });
 
-// 🟢 3. Remove single item from cart
 exports.removeFromCart = catchAsync(async (req, res, next) => {
   const { productId } = req.params;
 
@@ -80,7 +77,6 @@ exports.removeFromCart = catchAsync(async (req, res, next) => {
   });
 });
 
-// 🟢 4. Update quantity
 exports.updateQuantity = catchAsync(async (req, res, next) => {
   const { productId } = req.params;
   const { quantity } = req.body;
@@ -107,7 +103,6 @@ exports.updateQuantity = catchAsync(async (req, res, next) => {
   });
 });
 
-// 🟢 5. Clear Cart
 exports.clearCart = catchAsync(async (req, res, next) => {
   await Cart.findOneAndDelete({ user: req.user._id });
 
