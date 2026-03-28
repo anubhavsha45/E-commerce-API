@@ -11,6 +11,9 @@ router
 
 router.use(authController.restrictTo("admin"));
 
-router.route(":/orderId").delete(orderController.deleteOrder);
+router
+  .route(":/orderId")
+  .delete(orderController.deleteOrder)
+  .patch(orderController.updateOrder);
 
 module.exports = router;

@@ -21,12 +21,6 @@ exports.getOrders = catchAsync(async (req, res, next) => {
   });
 });
 
-const Cart = require("./../models/Cart");
-const Product = require("./../models/Product");
-const Order = require("./../models/Order");
-const AppError = require("./../utils/errorClass");
-const catchAsync = require("./../utils/catchAsync");
-
 exports.createOrder = catchAsync(async (req, res, next) => {
   const userId = req.user._id;
 
@@ -89,5 +83,24 @@ exports.deleteOrder = catchAsync(async (req, res, next) => {
   return res.status(204).json({
     status: "success",
     data: null,
+  });
+});
+
+exports.updateOrder = catchAsync(async (req, res, next) => {
+  const { status } = req.body;
+  const order = await Order.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
+
+  if (!order) {
+    return next(new AppError("There is no error with that id", 400));
+  }
+
+  return res.status(200).json({
+    status: "success",
+    data: {
+      order,
+    },
   });
 });
